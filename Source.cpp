@@ -3,9 +3,58 @@
 #include "queue.h"
 #include <time.h>
 #include <cstdlib>
+#include <assert>
 
 using namespace std;
 
+void test()
+{
+	Queue Q;
+	Stack S;
+	assert(Q.isEmpty() == true);
+	assert(Q.isEmpty() == false);
+
+	assert(Q.getfirstEmpty() == 0);
+
+	Q.enqueue(3);
+
+	assert(Q.getfirstEmpty() == 1);
+
+
+	assert(Q.isEmpty() == false);
+	assert(!Q.isEmpty() == true);
+
+	assert(Q.top() == 3);
+	assert(Q.dequeue() == 3);
+
+	assert(Q.getfirstEmpty() == 0);
+	assert(Q.isEmpty() == true);
+	assert(!Q.isEmpty() == false);
+
+	for(int i = 0 ; i <= 51; i++)
+		q.enqueue(3);
+
+	assert(Q.isFull() == true);
+	assert(S.isEmpty() == true);
+	assert(!S.isEmpty() == false);
+
+	assert(S.isFull() == false);
+
+	S.push(3);
+
+	assert(S.isEmpty() == false);
+	assert(!S.isEmpty() == true);
+	assert(S.isFull() == false);
+
+	assert(S.top() == 3);
+	assert(S.pop() == 3);
+
+	assert(S.isEmpty() == true);
+	assert(!S.isEmpty() == false);
+	assert(S.isFull() == false);
+
+
+}
 void populate(Queue &player1, Queue &player2, int red, int black)
 {
 	int randomNumber;
