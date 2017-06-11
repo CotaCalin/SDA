@@ -23,15 +23,26 @@ public:
 	}
 
 	bool isEmpty();
-
+	/*
+	Returns true if the stack is empty
+	Returns false if the stack is not empty
+	*/
 	void push(int a);
-
+	/*
+	Pushes a on top of the stack
+	*/
 	int top();
-
+	/*
+	Returns the element from the top of the stack
+	*/
 	int pop();
-
+	/*
+	Returns and deletes the element from the top of the stack
+	*/
 	bool isFull() { return false; }
-
+	/*
+	Returns False because the list is dynamically allocated and it can't be full
+	*/
 	~Stack()
 	{
 		Node* aux;
